@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Address" xml:space="preserve">
+    <value>1201 Infinity Ct, Lincoln, NE 68512</value>
+  </data>
+  <data name="BaseUrl2" xml:space="preserve">
+    <value>https://app.bloomgrowth.com/</value>
+    <comment>http://localhost:2200/</comment>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Bloom Growth</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Bloom Growth</value>
+  </data>
+  <data name="DefaultSoftwareUpdate" xml:space="preserve">
+    <value>&lt;div class="update update-current"&gt;
+	&lt;div class="head"&gt;Version 2.4.0&lt;/div&gt;
+	&lt;div class="su-details"&gt;
+		&lt;h1&gt;Major Features&lt;/h1&gt;
+		&lt;blockquote&gt;
+			&lt;span class="su-row"&gt;Organizational Chart Revamp&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Cleaner UI, Improved UX, Faster&lt;/li&gt;
+				&lt;li&gt;View chart by levels&lt;/li&gt;
+				&lt;li&gt;Condensed Chart mode&lt;/li&gt;
+				&lt;li&gt;Descriptive buttons&lt;/li&gt;
+				&lt;li&gt;Search bar improved&lt;/li&gt;
+				&lt;li&gt;Moved editing seats to side panel&lt;/li&gt;
+				&lt;li&gt;Added Re-centering&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Workspace dropdown&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Set a primary workspace&lt;/li&gt;
+				&lt;li&gt;Access any workspace from any page&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Tiles&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Update or add an item to any tile&lt;/li&gt;
+				&lt;li&gt;Added personal metrics download&lt;/li&gt;
+				&lt;li&gt;To-do list groups by meeting&lt;/li&gt;
+				&lt;li&gt;To-dos show a strike-through on completion&lt;/li&gt;
+				&lt;li&gt;Revamp the stats tile&lt;/li&gt;
+				&lt;li&gt;Added placeholder box on dragging tiles&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;To-dos/Issues/Headlines&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Add file at create time&lt;/li&gt;
+				&lt;li&gt;Attach to any number of meetings at creation or during editing&lt;/li&gt;
+				&lt;li&gt;Removed the 'about' field from headlines&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Add or remove V/TO measurables&lt;/span&gt;
+			&lt;span class="su-row"&gt;Moved issues show their new meeting&lt;/span&gt;
+			&lt;span class="su-row"&gt;Added meeting summary subscriptions&lt;/span&gt;
+			&lt;span class="su-row"&gt;Introduced emergency read-only mode&lt;/span&gt;
+		&lt;/blockquote&gt;
+		&lt;h1&gt;Bugs/Minor Features&lt;/h1&gt;
+		&lt;blockquote&gt;
+			&lt;span class='su-row'&gt;Organizational Chart no longer allows invalid data&lt;/span&gt;
+			&lt;span class='su-row'&gt;Fixed some L10's not loading until refresh&lt;/span&gt;
+			&lt;span class='su-row'&gt;Fixed errors on setting the zoom link&lt;/span&gt;
+			&lt;span class='su-row'&gt;Removed double nav-bar from some pages&lt;/span&gt;
+			&lt;span class='su-row'&gt;Removed duplicate core values from some people analyzers&lt;/span&gt;
+			&lt;span class='su-row'&gt;Removed completed to-dos from meeting summary&lt;/span&gt;
+			&lt;span class='su-row'&gt;Fixed tile dragging bug&lt;/span&gt;
+		&lt;/blockquote&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="update  update-old"&gt;
+	&lt;div class="head"&gt;Version 2.3.1&lt;/div&gt;
+	&lt;div class="su-details"&gt;
+		&lt;h1&gt;Major Features&lt;/h1&gt;
+		&lt;blockquote&gt;
+			&lt;span class="su-row"&gt;Forward quarterly printouts to your Bloom Growth Guide&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Send immediately or schedule to be sent on your before your offsite&lt;/li&gt;
+				&lt;li&gt;You receive the printout via BCC&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Star meetings&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Most used meetings at the top of your Weekly Meeting listing page&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Sticky metrics heading&lt;/span&gt;
+		&lt;/blockquote&gt;
+		&lt;h1&gt;Bugs/Minor Features&lt;/h1&gt;
+		&lt;blockquote&gt;
+			&lt;span class='su-row'&gt;Fixed tile resize bug&lt;/span&gt;
+		&lt;/blockquote&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="update update-old"&gt;
+	&lt;div class="head"&gt;Version 2.2.1&lt;/div&gt;
+	&lt;div class="su-details"&gt;
+		&lt;h1&gt;Major Features&lt;/h1&gt;
+		&lt;blockquote&gt;
+			&lt;span class="su-row"&gt;Quarterly printouts improved layouts&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Customizable branding and colors&lt;/li&gt;
+				&lt;li&gt;Organizational Chart prints on fewer pages&lt;/li&gt;
+				&lt;li&gt;Multi-page V/TO printouts look better&lt;/li&gt;
+				&lt;li&gt;Recreated the goals printout page&lt;/li&gt;
+				&lt;li&gt;Recreated the People Analyzer page&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Quarterly Conversation improved&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Added People Analyzer to the Weekly Meeting&lt;/li&gt;
+				&lt;li&gt;Improved layout of Quaterly Conversation&lt;/li&gt;
+				&lt;li&gt;Further distingushed expired Quarterly Conversations&lt;/li&gt;
+				&lt;li&gt;Quarterly Conversations issued in the background&lt;/li&gt;
+				&lt;li&gt;Renaming Quarterly Conversations&lt;/li&gt;
+				&lt;li&gt;Includes Goals&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Added cross-company goal status page to &lt;/span&gt;
+		&lt;/blockquote&gt;
+		&lt;h1&gt;Speed Improvements&lt;/h1&gt;
+		&lt;blockquote&gt;
+			&lt;span class='su-row'&gt;Dramatic improvments to the speed of the website&lt;/span&gt;
+			&lt;span class='su-row'&gt;Meeting summaries send more quickly&lt;/span&gt;
+			&lt;span class='su-row'&gt;Page load times improved&lt;/span&gt;
+			&lt;span class='su-row'&gt;Creating Quarterly Conversations is now non-blocking&lt;/span&gt;
+			&lt;span class='su-row'&gt;Meeting summary is now non-blocking&lt;/span&gt;
+			&lt;span class="su-row"&gt;Frequently executed queries optimized&lt;/span&gt;
+		&lt;/blockquote&gt;
+		&lt;h1&gt;Bugs/Minor Features&lt;/h1&gt;
+		&lt;blockquote&gt;
+			&lt;span class='su-row'&gt;Quarterly Conversation&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Added renaming of Quarterly Conversations&lt;/li&gt;
+				&lt;li&gt;Removed duplicate goals from Quarterly Conversation&lt;/li&gt;
+				&lt;li&gt;Refresh page on issue Quarterly Conversation&lt;/li&gt;
+				&lt;li&gt;Added Quarterly Conversation archive&lt;/li&gt;
+				&lt;li&gt;Added Quarterly Conversation archive&lt;/li&gt;
+				&lt;li&gt;Removed auto-complete from the issuing Quarterly Conversation&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class='su-row'&gt;Company goals included in individual goals section on the printout&lt;/span&gt;
+		&lt;/blockquote&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="update update-old"&gt;
+	&lt;div class="head"&gt;Version 2.1.1&lt;/div&gt;
+	&lt;div class="su-details"&gt;
+		&lt;h1&gt;Major Features&lt;/h1&gt;
+		&lt;blockquote&gt;
+			&lt;span class="su-row"&gt;API Version 1 released&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Access Traction Tools data programatically &lt;/li&gt;
+				&lt;li&gt;Add/Edit/Remove Goals, Roles, Measurables, Scores, Todos, Issues &lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Metrics charts &lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;View charted data on the Metrics page of the Weekly Meeting&lt;/li&gt;
+				&lt;li&gt;Combine multiple measurables to identify patterns&lt;/li&gt;
+				&lt;li&gt;To use, click the chart icon&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Alternate invite method when email fails&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Accessible from the resend invite on the second attempt to send&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;More Organizational Chart printing options&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Print sub-trees by clicking the print button on a seat&lt;/li&gt;
+				&lt;li&gt;Print organizational chart one department per page&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Invoices&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;View new or outstanding invoices&lt;/li&gt;
+				&lt;li&gt;Pay outstanding invoices &lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Company Statistics&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;View statistics about your organization&lt;/li&gt;
+				&lt;li&gt;Goals, Todos, Issues, Employees&lt;/li&gt;
+				&lt;li&gt;Accessible by admins from the Manage Organization page, on the Advanced tab&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Metrics formulas&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Calculate rows for metrics&lt;/li&gt;
+				&lt;li&gt;Combine data from multiple measurables&lt;/li&gt;
+				&lt;li&gt;To access, hold the 'shift' key when viewing a metrics and click '(f)'&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/blockquote&gt;
+		&lt;h1&gt;Bugs/Minor Features&lt;/h1&gt;
+		&lt;blockquote&gt;
+			&lt;span class='su-row'&gt;Scorecard numerical truncation&lt;/span&gt;
+			&lt;span class='su-row'&gt;Added date and meeting title to Weekly Meeting printout&lt;/span&gt;
+			&lt;span class='su-row'&gt;Button added to undo moved issues&lt;/span&gt;
+			&lt;span class='su-row'&gt;L10 timers off&lt;/span&gt;
+			&lt;span class='su-row'&gt;Headlines now grab notes&lt;/span&gt;
+			&lt;span class='su-row'&gt;Banner Todo/Issue/Headlines buttons larger&lt;/span&gt;
+			&lt;span class='su-row'&gt;Forgot password link more prominent &lt;/span&gt;
+			&lt;span class='su-row'&gt;Weekly Meeting Agenda printout matches meeting ordering for Issues and Todos&lt;/span&gt;
+			&lt;span class='su-row'&gt;Issues sortable by create date&lt;/span&gt;
+			&lt;span class='su-row'&gt;Notes for Headlines now opens in Archive&lt;/span&gt;
+			&lt;span class='su-row'&gt;Shared V/TOs now display titles on Vision page&lt;/span&gt;
+			&lt;span class='su-row'&gt;Shared V/TOs now display titles on Traction page&lt;/span&gt;
+			&lt;span class='su-row'&gt;Cleaner error pages&lt;/span&gt;
+			&lt;span class='su-row'&gt;Add linkable text to the notes panels&lt;/span&gt;
+			&lt;span class='su-row'&gt;Fixed accountabilities page bug&lt;/span&gt;
+			&lt;span class='su-row'&gt;Goals printout reformatted to match EOS documents&lt;/span&gt;
+			&lt;span class='su-row'&gt;Issues' notes no longer run off the page when moving&lt;/span&gt;
+			&lt;span class='su-row'&gt;Edit rating now available on the meeting stats page after conclusion&lt;/span&gt;
+			&lt;span class='su-row'&gt;Added triple dot indicator below the collapsed organizational chart seat&lt;/span&gt;
+			&lt;span class='su-row'&gt;Add divider' puts the divider in a more visible position&lt;/span&gt;
+			&lt;span class='su-row'&gt;Deletable phone actions&lt;/span&gt;
+			&lt;span class='su-row'&gt;Milestones occasionally showing up on the todo list&lt;/span&gt;
+		&lt;/blockquote&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="update update-old"&gt;
+	&lt;div class="head"&gt;Version 2.0.3&lt;/div&gt;
+	&lt;div class="su-details"&gt;
+		&lt;h1&gt;Major Experience Changes&lt;/h1&gt;
+		&lt;blockquote&gt;
+			&lt;span class="su-row"&gt;Reworked the Edit Meeting page in the "Meeting Manager"&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Replaced all Weekly Meeting listing buttons with one "Manage" button	&lt;/li&gt;
+				&lt;li&gt;Moved all dropdown actions into the meeting manager	&lt;/li&gt;
+				&lt;li&gt;Updated the Add/Create user dialog	&lt;/li&gt;
+				&lt;li&gt;Added a searchable Add/Create dialog for Measurables and Goals	&lt;/li&gt;
+				&lt;li&gt;Link measurables/goals from other meetings&lt;/li&gt;
+				&lt;li&gt;Must be owned by an attendee&lt;/li&gt;
+				&lt;li&gt;Adjusted the Add button, now floats with the screen	&lt;/li&gt;
+				&lt;li&gt;Moved the Edit Pages into the Meeting Manager	&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Removed extra menus&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Eliminated "Admin Settings"	&lt;/li&gt;
+				&lt;li&gt;Changed "My Settings" =&gt; "Edit my profile"	&lt;/li&gt;
+				&lt;li&gt;Removed "My accountabilities" link	&lt;/li&gt;
+				&lt;li&gt;Removed "My accountabilities" link	&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Added Preview meeting&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Under "Start meeting"	&lt;/li&gt;
+				&lt;li&gt;No closing todos/headlines/emailing	&lt;/li&gt;
+				&lt;li&gt;Limited editing	&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Removed the Meeting Advanced Settings page &lt;/span&gt;
+			&lt;span class="su-row"&gt;Reduced some of the editability on the workspace&lt;/span&gt;
+			&lt;span class="su-row"&gt;Added autogenerated workspaces for L10s&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Not editable&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Software swaps out personal metrics with Weekly Meeting metrics when user registers (if one is available)&lt;/span&gt;
+			&lt;span class="su-row"&gt;Reworked the Manage Organization page&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Removed the AC, Position, Team, Org tabs	&lt;/li&gt;
+				&lt;li&gt;Added Core Values, Payments	&lt;/li&gt;
+				&lt;li&gt;Moved payments out of Advanced into its own tab	&lt;/li&gt;
+				&lt;li&gt;Special permissions for updating financial info, default is admins&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/blockquote&gt;
+		&lt;h1&gt;Major Features&lt;/h1&gt;
+		&lt;blockquote&gt;
+			&lt;span class="su-row"&gt;Multiple Target markets allowed on VTO&lt;/span&gt;
+			&lt;span class="su-row"&gt;Headlines tile on workspace&lt;/span&gt;
+			&lt;span class="su-row"&gt;Created beta.traction.tools&lt;/span&gt;
+			&lt;span class="su-row"&gt;Users can add Placeholder Users&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Placeholders are free users	&lt;/li&gt;
+				&lt;li&gt;Placeholders require no email addres	&lt;/li&gt;
+				&lt;li&gt;Registering this user removes placeholder status	&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Speed for Weekly Meeting listing and Meeting Manager dramatically improved&lt;/span&gt;
+		&lt;/blockquote&gt;
+
+		&lt;h1&gt;Bugs/Minor Features&lt;/h1&gt;
+		&lt;blockquote&gt;
+			&lt;span class="su-row"&gt;Ability to restore goals, headlines, todos, &amp; issues from the Archive&lt;/span&gt;
+			&lt;span class="su-row"&gt;Change Personal todo to L10 todo&lt;/span&gt;
+			&lt;span class="su-row"&gt;Allowed to set todo owner as "caller" from advanced settings&lt;/span&gt;
+			&lt;ul&gt;
+				&lt;li&gt;The person creating the todo in Weekly Meeting is supplied in the modal window	&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;span class="su-row"&gt;Ability to retitle a note&lt;/span&gt;
+			&lt;span class="su-row"&gt;Print and export headlines&lt;/span&gt;
+			&lt;span class="su-row"&gt;Rock percentage and ratio added to printout&lt;/span&gt;
+			&lt;span class="su-row"&gt;Fixed consistance with rock status for exporting&lt;/span&gt;
+			&lt;span class="su-row"&gt;Headlines editable from workspace&lt;/span&gt;
+			&lt;span class="su-row"&gt;Aggregate Rock completion % on company rocks section and printout&lt;/span&gt;
+			&lt;span class="su-row"&gt;Consistancy with to-do due.&lt;/span&gt;
+			&lt;span class="su-row"&gt;Fixed a bug with metrics dates being off by one in some timezones&lt;/span&gt;
+			&lt;span class="su-row"&gt;Users can be marked as Leadership Team members on account creation&lt;/span&gt;
+			&lt;span class="su-row"&gt;Adjusted FAQ for new pages&lt;/span&gt;
+			&lt;span class="su-row"&gt;Permissions for updating Payment information (admins by default)&lt;/span&gt;
+			&lt;span class="su-row"&gt;Added "Beta" text to login page. Can be interchanged any time&lt;/span&gt;
+			&lt;span class="su-row"&gt;Fixed some printing issues with VTO&lt;/span&gt;
+			&lt;span class="su-row"&gt;Fixed a create goal from todo bug&lt;/span&gt;
+			&lt;span class="su-row"&gt;Exclude the Guarantee and Proven process from printout if they are blank&lt;/span&gt;
+			&lt;span class="su-row"&gt;Fixed Export measurable bug when measurable has same name&lt;/span&gt;
+
+		&lt;/blockquote&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="EngineeringEmail" xml:space="preserve">
+    <value>tech@bloomgrowth.com</value>
+  </data>
+  <data name="ErrorEmail" xml:space="preserve">
+    <value>clay.upton@bloomgrowth.com</value>
+  </data>
+  <data name="MarketingUrl" xml:space="preserve">
+    <value>https://bloomgrowth.com/</value>
+  </data>
+  <data name="PaymentExceptionEmail" xml:space="preserve">
+    <value>clay.upton@bloomgrowth.com</value>
+  </data>
+  <data name="PaymentReceiptEmail" xml:space="preserve">
+    <value>payment-receipts@bloomgrowth.com</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Bloom Growth</value>
+  </data>
+  <data name="PurchaseEmail" xml:space="preserve">
+    <value>clay.upton@radialreview.com</value>
+  </data>
+  <data name="PurchaseNumber" xml:space="preserve">
+    <value>1-402-437-0098</value>
+  </data>
+  <data name="SupportEmail" xml:space="preserve">
+    <value>help@bloomgrowth.com</value>
+    <comment>support@mail.traction.tools</comment>
+  </data>
+  <data name="TestEmail" xml:space="preserve">
+    <value>clay.upton+test@radialreview.com</value>
+  </data>
+</root>

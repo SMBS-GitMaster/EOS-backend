@@ -1,0 +1,175 @@
+using NHibernate;
+using NHibernate.Criterion;
+using RadialReview.Models;
+using RadialReview.Models.Enums;
+using RadialReview.Utilities;
+using RadialReview.Utilities.DataTypes;
+using RadialReview.Utilities.Query;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace RadialReview.Accessors {
+	public class SimpleAnswerLookup {
+		public List<AnswerModel> SurveyAnswers { get; set; }
+		public List<ByAboutStarted> ByAboutStartedList { get; set; }
+
+		/// <summary>
+		/// Gets the number of people this person started reviewing
+		/// </summary>
+		/// <param name="byUserId"></param>
+		/// <returns></returns>
+		public Ratio GetNumberReviewed_ByUser(long byUserId) {
+			var total = ByAboutStartedList.Where(x => x.ByUserId == byUserId).Count();
+			var started = ByAboutStartedList.Where(x => x.ByUserId == byUserId && x.StartedReviewing).Count();
+
+			return new Ratio(started, total);
+		}
+
+		/// <summary>
+		/// Gets the number of people reviewed by this person
+		/// </summary>
+		/// <param name="byUserId"></param>
+		/// <returns></returns>
+		public Ratio GetNumberReviewees_AboutUser(long aboutUserId) {
+			var total = ByAboutStartedList.Where(x => x.AboutUserId == aboutUserId).Count();
+			var started = ByAboutStartedList.Where(x => x.AboutUserId == aboutUserId && x.StartedReviewing).Count();
+			return new Ratio(started, total);
+		}
+
+		public class ByAboutStarted {
+			public long ByUserId { get; set; }
+			public long AboutUserId { get; set; }
+			public bool StartedReviewing { get; set; }
+		}
+	}
+
+	public partial class ReviewAccessor : BaseAccessor {
+
+
+		public static SimpleAnswerLookup GetSimpleAnswerLookup_Unsafe(long reviewContainerId, bool includeSurvey, bool includeCompletion) {
+
+			using (var s = HibernateSession.GetCurrentSession()) {
+				using (var tx = s.BeginTransaction()) {
+
+					var reviewContainer = s.Get<ReviewsModel>(reviewContainerId);
+					IEnumerable<AnswerModel> surveyAnswers = new List<AnswerModel>();
+					IEnumerable<object[]> userReviewCounts = new List<object[]>();
+
+					if (includeSurvey) {
+						surveyAnswers = s.QueryOver<AnswerModel>().Where(x =>
+							  x.DeleteTime == null &&
+							  x.ForReviewContainerId == reviewContainerId &&
+							  x.RevieweeUserId == reviewContainer.OrganizationId
+						).Future();
+					}
+
+					if (includeCompletion) {
+						userReviewCounts = s.QueryOver<AnswerModel>().Where(x =>
+							  x.DeleteTime == null &&
+							  x.ForReviewContainerId == reviewContainerId
+						).Select(
+							Projections.Group<AnswerModel>(x => x.RevieweeUserId),
+							Projections.Group<AnswerModel>(x => x.ReviewerUserId),
+							Projections.Max<AnswerModel>(x => x.Complete)
+						).Future<object[]>();
+					}
+
+
+					return new SimpleAnswerLookup() {
+						SurveyAnswers = surveyAnswers.ToList(),
+						ByAboutStartedList = userReviewCounts.Select(x => {
+							return new SimpleAnswerLookup.ByAboutStarted() {
+								AboutUserId = (long)x[0],
+								ByUserId = (long)x[1],
+								StartedReviewing = ((bool)x[2])
+							};
+						}).ToList()
+					};
+				}
+			}
+		}
+
+
+		#region Populate
+		private static void PopulateReviewContainerCompletion(ISession s, ReviewsModel reviewContainer) {
+			var reviewContainerId = reviewContainer.Id;
+
+			var optional = s.QueryOver<AnswerModel>().Where(x => x.DeleteTime == null && x.ForReviewContainerId == reviewContainerId && !x.Required).Select(Projections.RowCount()).SingleOrDefault<int>();
+			var required = s.QueryOver<AnswerModel>().Where(x => x.DeleteTime == null && x.ForReviewContainerId == reviewContainerId && x.Required).Select(Projections.RowCount()).SingleOrDefault<int>();
+			var optComp = s.QueryOver<AnswerModel>().Where(x => x.DeleteTime == null && x.ForReviewContainerId == reviewContainerId && !x.Required && x.Complete).Select(Projections.RowCount()).SingleOrDefault<int>();
+			var reqComp = s.QueryOver<AnswerModel>().Where(x => x.DeleteTime == null && x.ForReviewContainerId == reviewContainerId && x.Required && x.Complete).Select(Projections.RowCount()).SingleOrDefault<int>();
+
+			var completion = new CompletionModel(reqComp, required, optComp, optional);
+			reviewContainer.Completion = completion;
+		}
+
+		private static void PopulateReviewContainer(AbstractQuery s, ReviewsModel reviewContainer, bool populateAnswers, bool populateClientReport) {
+			var reviewContainerId = reviewContainer.Id;
+			var reviewsQuery = s.Where<ReviewModel>(x => x.ForReviewContainerId == reviewContainerId);
+			var reviews = reviewsQuery.ToList();
+			if (populateAnswers) {
+				var allAnswers = s.Where<AnswerModel>(x => x.ForReviewContainerId == reviewContainerId).ToList();
+
+				foreach (var r in reviews) {
+					PopulateAnswers( r, allAnswers);
+				}
+			}
+
+
+			reviewContainer.Reviews = reviews;
+		}
+
+		public static IEnumerable<AnswerModel> FilterOutDuplicates(IEnumerable<AnswerModel> answers) {
+			return answers.GroupBy(x => x.RevieweeUserId + "_" + x.ReviewerUserId + "_" + x.Askable.Id)
+					.Select(x =>
+						x.OrderByDescending(y => y.CompleteTime ?? DateTime.MinValue)
+						.ThenByDescending(y => {
+							var value = y as CompanyValueAnswer;
+							var gwc = y as GetWantCapacityAnswer;
+							var rock = y as RockAnswer;
+							var score = 0;
+							if (value != null) {
+								if (value.Exhibits != PositiveNegativeNeutral.Indeterminate)
+									score += 1;
+								if (!String.IsNullOrWhiteSpace(value.Reason))
+									score += 1;
+							}
+							if (gwc != null) {
+								if (gwc.GetIt != FiveState.Indeterminate)
+									score += 1;
+								if (!String.IsNullOrWhiteSpace(gwc.GetItReason))
+									score += 1;
+
+								if (gwc.WantIt != FiveState.Indeterminate)
+									score += 1;
+								if (!String.IsNullOrWhiteSpace(gwc.WantItReason))
+									score += 1;
+
+								if (gwc.HasCapacity != FiveState.Indeterminate)
+									score += 1;
+								if (!String.IsNullOrWhiteSpace(gwc.HasCapacityReason))
+									score += 1;
+							}
+
+							if (rock != null) {
+								if (rock.Finished != Tristate.Indeterminate)
+									score += 1;
+								if (!String.IsNullOrWhiteSpace(rock.Reason))
+									score += 1;
+							}
+							return score;
+						})
+						.First()
+					).ToList();
+		}
+
+		private static void PopulateAnswers( ReviewModel review, List<AnswerModel> allAnswers) {
+			var answers = allAnswers.Where(x => x.ForReviewId == review.Id).ToList();
+
+			review.Answers = FilterOutDuplicates(answers).ToList();
+		}
+		#endregion
+
+	}
+}

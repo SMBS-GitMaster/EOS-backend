@@ -1,0 +1,333 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <OutputPath>bin\</OutputPath>
+    <TransformWebConfigEnabled>False</TransformWebConfigEnabled>
+    <DocumentationFile>bin\XmlComments.xml</DocumentationFile>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PreserveCompilationContext>false</PreserveCompilationContext>
+    <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+    <EnableNETAnalyzers>False</EnableNETAnalyzers>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Accessors\AccountabilityChart\**" />
+    <Compile Remove="Accessors\Powerpoint\**" />
+    <Compile Remove="Areas\People\Engines\Surveys\Abstract\**" />
+    <Compile Remove="Areas\RouteDebugger\**" />
+    <Compile Remove="bu\**" />
+    <Compile Remove="Controllers\Filters\**" />
+    <Compile Remove="External\**" />
+    <Compile Remove="GraphQL\Models\Issues\**" />
+    <Compile Remove="logs\**" />
+    <Compile Remove="Middleware\Hangfire\**" />
+    <Compile Remove="Middleware\ModelBinding\JsonConverters\**" />
+    <Compile Remove="NHProfFiles\**" />
+    <Compile Remove="Scripts\test\**" />
+    <Compile Remove="Temp\**" />
+    <Compile Remove="TODO\**" />
+    <Compile Remove="Utilities\HtmlToPdf\**" />
+    <Compile Remove="Utilities\Migradoc\**" />
+    <Compile Remove="Utilities\Suggestions\**" />
+    <Content Remove="Accessors\AccountabilityChart\**" />
+    <Content Remove="Accessors\Powerpoint\**" />
+    <Content Remove="Areas\People\Engines\Surveys\Abstract\**" />
+    <Content Remove="Areas\RouteDebugger\**" />
+    <Content Remove="bu\**" />
+    <Content Remove="Controllers\Filters\**" />
+    <Content Remove="External\**" />
+    <Content Remove="logs\**" />
+    <Content Remove="Middleware\Hangfire\**" />
+    <Content Remove="Middleware\ModelBinding\JsonConverters\**" />
+    <Content Remove="NHProfFiles\**" />
+    <Content Remove="Scripts\test\**" />
+    <Content Remove="Temp\**" />
+    <Content Remove="TODO\**" />
+    <Content Remove="Utilities\HtmlToPdf\**" />
+    <Content Remove="Utilities\Migradoc\**" />
+    <Content Remove="Utilities\Suggestions\**" />
+    <EmbeddedResource Remove="Accessors\AccountabilityChart\**" />
+    <EmbeddedResource Remove="Accessors\Powerpoint\**" />
+    <EmbeddedResource Remove="Areas\People\Engines\Surveys\Abstract\**" />
+    <EmbeddedResource Remove="Areas\RouteDebugger\**" />
+    <EmbeddedResource Remove="bu\**" />
+    <EmbeddedResource Remove="Controllers\Filters\**" />
+    <EmbeddedResource Remove="External\**" />
+    <EmbeddedResource Remove="GraphQL\Models\Issues\**" />
+    <EmbeddedResource Remove="logs\**" />
+    <EmbeddedResource Remove="Middleware\Hangfire\**" />
+    <EmbeddedResource Remove="Middleware\ModelBinding\JsonConverters\**" />
+    <EmbeddedResource Remove="NHProfFiles\**" />
+    <EmbeddedResource Remove="Scripts\test\**" />
+    <EmbeddedResource Remove="Temp\**" />
+    <EmbeddedResource Remove="TODO\**" />
+    <EmbeddedResource Remove="Utilities\HtmlToPdf\**" />
+    <EmbeddedResource Remove="Utilities\Migradoc\**" />
+    <EmbeddedResource Remove="Utilities\Suggestions\**" />
+    <None Remove="Accessors\AccountabilityChart\**" />
+    <None Remove="Accessors\Powerpoint\**" />
+    <None Remove="Areas\People\Engines\Surveys\Abstract\**" />
+    <None Remove="Areas\RouteDebugger\**" />
+    <None Remove="bu\**" />
+    <None Remove="Controllers\Filters\**" />
+    <None Remove="External\**" />
+    <None Remove="GraphQL\Models\Issues\**" />
+    <None Remove="logs\**" />
+    <None Remove="Middleware\Hangfire\**" />
+    <None Remove="Middleware\ModelBinding\JsonConverters\**" />
+    <None Remove="NHProfFiles\**" />
+    <None Remove="Scripts\test\**" />
+    <None Remove="Temp\**" />
+    <None Remove="TODO\**" />
+    <None Remove="Utilities\HtmlToPdf\**" />
+    <None Remove="Utilities\Migradoc\**" />
+    <None Remove="Utilities\Suggestions\**" />
+    <TypeScriptCompile Remove="bu\**" />
+    <TypeScriptCompile Remove="External\**" />
+    <TypeScriptCompile Remove="logs\**" />
+    <TypeScriptCompile Remove="NHProfFiles\**" />
+    <TypeScriptCompile Remove="Scripts\test\**" />
+    <TypeScriptCompile Remove="Temp\**" />
+    <TypeScriptCompile Remove="TODO\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Accessors\PdfChartAccessor_broken.cs" />
+    <Compile Remove="Areas\People\Models\QuarterlyConversation\QC.cs" />
+    <Compile Remove="Areas\People\Models\QuarterlyConversation\QC_Answer.cs" />
+    <Compile Remove="Areas\People\Models\QuarterlyConversation\QC_Question.cs" />
+    <Compile Remove="Properties\ConstantStrings1.Designer.cs" />
+    <Compile Remove="Properties\ExceptionStrings1.Designer.cs" />
+    <Compile Remove="ThisAssembly.GitInfo.g.cs" />
+    <Compile Remove="Utilities\Pdf\WordUtility.cs" />
+    <Compile Remove="Utilities\RealTime\RealTimeUtility.IRealtimeUpdater.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\ErrorMessageStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorMessageStrings.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Properties\DisplayNameStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DisplayNameStrings.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Properties\MessageStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageStrings.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Properties\ConstantStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConstantStrings.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Properties\EmailStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailStrings.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Properties\ExceptionStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExceptionStrings.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Properties\EmailTypes.Designer.cs">
+      <DependentUpon>EmailTypes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Update="Properties\ProductStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductStrings.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Properties\MandrillStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MandrillStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\ErrorMessageStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessageStrings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\DisplayNameStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DisplayNameStrings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\MessageStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessageStrings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\ConstantStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConstantStrings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\EmailStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmailStrings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\ExceptionStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExceptionStrings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\EmailTypes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmailTypes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\MandrillStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MandrillStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\ProductStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductStrings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Hangfire.Pro.Redis">
+      <HintPath>..\RadialReview\Hangfire.Pro.Redis.2.8.0-beta1\Hangfire.Pro.Redis.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PdfSharpMigradoc\MigraDoc.DocumentObjectModel\MigraDoc.DocumentObjectModel.csproj" />
+    <ProjectReference Include="..\PdfSharpMigradoc\MigraDoc.Rendering\MigraDoc.Rendering.csproj" />
+    <ProjectReference Include="..\RadialReview.BusinessPlan.Models\RadialReview.BusinessPlan.Models.csproj" />
+    <ProjectReference Include="..\RadialReview.DatabaseModel\RadialReview.DatabaseModel.csproj" />
+    <ProjectReference Include="..\RadialReview.Queryable\RadialReview.Queryable.csproj" />
+    <ProjectReference Include="..\TractionTools.Repositories\TractionTools.Repositories.csproj" />
+    <ProjectReference Include="..\TractionTools.Services\TractionTools.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Core" Version="3.7.7" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.2.19" />
+    <PackageReference Include="AWSSDK.EC2" Version="3.7.59.3" />
+    <PackageReference Include="AWSSDK.ElasticBeanstalk" Version="3.7.0.123" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.7.21" />
+    <PackageReference Include="AWSSDK.SecretsManager" Version="3.7.2.4" />
+    <PackageReference Include="AWSXRayRecorder.Core" Version="2.14.0" />
+
+    <PackageReference Include="Concentus" Version="1.1.7" />
+
+    <PackageReference Include="Cronos" Version="0.7.1" />
+    <PackageReference Include="Dangl.Calculator" Version="1.4.0" />
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
+    <PackageReference Include="ExcelDataReader.DataSet" Version="3.6.0" />
+    <PackageReference Include="FFMpegCore" Version="5.1.0" />
+    <PackageReference Include="FluentNHibernate" Version="3.1.0" />
+    <PackageReference Include="FluentResults" Version="3.14.0" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.7.28" />
+    <PackageReference Include="Hangfire.Console" Version="1.4.2" />
+    <PackageReference Include="Hangfire.Pro" Version="2.3.0" />
+    <PackageReference Include="HtmlSanitizer" Version="7.1.475" />
+    <PackageReference Include="Humanizer.Core" Version="2.14.1" />
+    <PackageReference Include="Imageflow.AllPlatforms" Version="0.7.24" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Redis" Version="1.1.5" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Telemetry.Abstractions" Version="8.5.0" />
+    <PackageReference Include="MySqlConnector" Version="2.3.7" />
+    <PackageReference Include="RedLock.net" Version="2.3.2" />
+    <PackageReference Include="NAudio" Version="1.9.0" />
+    <PackageReference Include="NHibernate.Driver.MySqlConnector" Version="2.0.5" />
+    <PackageReference Include="OpenTelemetry" Version="1.8.1" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.8.1" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.8.1" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" Version="1.8.0" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.StackExchangeRedis" Version="1.0.0-rc9.14" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.EntityFrameworkCore" Version="1.0.0-beta.11" />
+    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.8.1" />
+    <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.8.1" />
+    <PackageReference Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.8.0-rc.1" />
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.8.1" />
+    <PackageReference Include="OpenTelemetry.Contrib.Extensions.AWSXRay" Version="1.2.0" />
+    <PackageReference Include="OpenTelemetry.Contrib.Instrumentation.AWS" Version="1.0.2" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Hangfire" Version="1.6.0-beta.1" />
+    <PackageReference Include="MySql.Data.OpenTelemetry" Version="8.4.0" />
+    <PackageReference Include="PdfToSvg.NET" Version="0.8.0" />
+    <PackageReference Include="Pluralize.NET" Version="1.0.2" />
+    <PackageReference Include="PuppeteerSharp" Version="2.0.4" />
+    <PackageReference Include="Respond" Version="1.2.0" />
+    <PackageReference Include="SpreadsheetLight" Version="3.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.5.0" />
+    <PackageReference Include="System.IO.Hashing" Version="7.0.0" />
+    <PackageReference Include="TaxJar" Version="3.3.2" />
+    <PackageReference Include="TimeZoneConverter" Version="5.0.0" />
+    <PackageReference Include="WebApiRouteDebugger" Version="1.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.2" />
+    <PackageReference Include="System.Linq.Async" Version="6.0.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+    <PackageReference Include="CommonMark.NET" Version="0.15.1" />
+    <PackageReference Include="CsvHelper" Version="27.2.1" />
+    <PackageReference Include="MathNet.Numerics" Version="4.15.0" />
+    <PackageReference Include="LumenWorksCsvReader" Version="4.0.0" />
+    <PackageReference Include="NHibernate.Envers" Version="5.3.2" />
+    <PackageReference Include="Twilio" Version="5.70.0" />
+    <PackageReference Include="Mandrill" Version="3.1.0" />
+    <PackageReference Include="TimeZoneNames" Version="3.4.0" />
+
+    <PackageReference Include="HotChocolate.AspNetCore" Version="13.7.0" />
+    <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="13.7.0" />
+    <PackageReference Include="HotChocolate.Data" Version="13.7.0" />
+    <PackageReference Include="HotChocolate.Data.EntityFramework" Version="13.7.0" />
+    <PackageReference Include="HotChocolate.Diagnostics" Version="13.7.0" />
+    <PackageReference Include="HotChocolate.Subscriptions.Redis" Version="13.7.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="5.0.0" />
+  </ItemGroup>
+</Project>

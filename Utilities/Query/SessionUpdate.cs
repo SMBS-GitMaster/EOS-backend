@@ -1,0 +1,22 @@
+﻿using NHibernate;
+
+namespace RadialReview.Utilities.Query {
+	public class SessionUpdate : AbstractUpdate {
+		protected ISession Session { get; set; }
+		public SessionUpdate(ISession session) {
+			Session = session;
+		}
+
+		public override void Save(object obj) {
+			Session.Save(obj);
+		}
+
+		public override void Merge(object obj) {
+			Session.SaveOrUpdate(obj);
+		}
+
+		public override void Update(object obj) {
+			Session.Update(obj);
+		}
+	}
+}
